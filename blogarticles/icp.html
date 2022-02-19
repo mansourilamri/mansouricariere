@@ -1,0 +1,514 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Lamri, Mansouri Blog</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="../index.html" class="logo">Lamri, Mansouri</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="../index.html">About me</a></li>
+							<li><a href="../RH.html">Recent Highlights</a></li>
+							<li class="active"><a href="../Blog.html">Blog</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://twitter.com/mansourilamri" target="_blank"class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="http://linkedin.com/in/mansourilamri" target="_blank"class="icon brands fa-linkedin"><span class="label">Linkdin</span></a></li>
+									<li><a href="MAILTO:mansourilamri@gmail.com" target="_blank" class="icon regular fa-envelope"><span class="label">E-Mail</span></a></li>
+									<li><a href="https://github.com/mansourilamri" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>PowerShell Lamri</h1>
+								</header>
+									<dl>
+										<dt>lamri</dt>
+										<dd>
+											<p>lamri<br />
+											lamri </p>
+										</dd>
+
+										<dt>Calcul Loation</dt>
+		<pre><code>#Auteur Mansouri Lamri
+#Date 2021-05-28
+#version 1.0
+#
+#
+#Entées: Nombre de kilometre parcorus trajet
+#        
+#Sorties: affiche le calcul de Location vehicule
+#
+#Description :
+#La compagnie Rent-A-Van désire un programme lui permettant de calculer le coût total de location
+#d'un véhicule. Les clients payent un tarif de base plus un prix fixe pour chaque kilomètre parcouru.
+#Le tarif de base est de 50$ et le prix d'un kilomètre est de 0.50$. Le programme doit permettre à
+#l'utilisateur d'entrer les kilomètres parcourus. Le tarif de base, le prix par kilomètre, le nombre de
+#kilomètres parcourus et le prix total sera affiché à l'écran.
+########################################################################################
+#
+#					                Main
+########################################################################################
+
+###Constantes
+
+[float] $prixdeBase = 50
+[float] $prixparKm =0.5
+
+###Variables
+
+[float] $nbparKm
+[float] $Totaldelocation
+
+
+
+Clear-Host
+  Write-Host -NoNewline " Entrer le nombre de kilometre parcourus trajet:"
+ $nbparKm = Read-Host
+ $totaldelocation = $prixdeBase + ($prixparKm * $nbparKm)
+ ##################
+ # resultat globale
+
+ Write-Host " nbre kilometre parcorus(trajet): $nbparkm km"
+#
+ Write-Host " Tarif de base                  : $prixdeBase $"
+#
+ Write-Host " Prix par kilometre             : $prixparkm $"
+#
+ Write-Host " Total                          : $Totaldelocation $"
+									</code></pre>
+</dd>
+</dd>
+<dt>Couleur Script</dt>
+									<pre><code>log_batch_size = Integer(
+Write-Host -ForegroundColor green  "******* "
+
+Write-Host -ForegroundColor yellow -NoNewline -Object "********** "
+
+
+Write-Host -ForegroundColor blue -NoNewline -Object "mansouri "
+
+
+Write-Host -ForegroundColor red -NoNewline -Object "********** " 
+)
+									</code></pre>
+	<dt>Nbre Myster</dt>																	
+										
+<pre><code>log_batch_size = Integer(
+ #
+#$rep = 1
+#while ( $rep ) {
+ 
+#      Write-Host "Entrez une valeur entre 0 et 100 inclusivement"
+ #    [int] $nb = Read-Host
+#
+    ### Validation des donnees saisies.
+#
+#if (( $nb -lt $MIN ) -or ( $nb -gt $MAX )) {
+#Write-Host "La valeur entree est hors limite. Recommencez!"
+#     }
+#   else {
+#     $rep = 0
+ #    }
+#}  Fin while ( $rep )
+
+Write-Host "Entrez une valeur entre 0 et 100 inclusivement"
+[int] $nb = Read-Host
+
+do {
+    #
+    ### Verification entre le nombre entre et le nombre mystere.
+     #
+  if ( $nb -lt $nbMyst ) {
+         Write-Host "*** $nb est plus petit que le nombre mystere."
+         Write-Host "*** Entrez une nouvelle valeur." -ForegroundColor Green
+         [int] $nb = Read-Host
+   }
+  elseif ( $nb -gt $nbMyst ) {
+         Write-Host "*** $nb est plus grand que le nombre mystere."
+         Write-Host "*** Entrez une nouvelle valeur." -ForegroundColor Green
+         [int] $nb = Read-Host
+   }
+
+} while ( $nb -ne $nbMyst )
+
+Write-Host
+Write-Host "***** Bravo! Vous avez trouve le nombre mystere. *****" -ForegroundColor yellow
+#Read-Host
+
+
+
+</code></pre>		
+
+<dt>Note A+ ou Echec ou passable</dt>
+									
+<pre><code>log_batch_size = Integer(
+  Entrées: Une série de notes.
+#
+# Sorties: Affiche une note littérale selon la moyenne obtenue.
+#
+# Description: Le script demande à l'utilisateur d'entrée des notes dans 2
+# tableaux. Au total, 10 notes seront entrées. On calcule la
+# moyenne de ces notes et on l'affiche.
+#
+# Modifications:
+#
+###############################################################################
+#
+### Variables
+#
+[int] $somme = 0 # La somme des notes reçues.
+[float] $moyenne = 0 # La moyenne des notes.
+[int[]] $notes1 = @() # Premier tableau des notes.
+[int[]] $notes2 = @() # Second tableau des notes.
+[int[]] $notes3 = @() # Tableau combiné des notes.
+[char] $noteLitterale # Note littérale selon la moyenne.
+[string] $mention # Mention obtenue.
+$i = 0 # variable de boucle.
+##############################################################################
+# MAIN #
+##############################################################################
+Clear-Host
+#
+### Acquisition des données du tableau 1.
+#
+do {
+Write-Host "Entrez une note pour le premier tableau."
+$notes1 += Read-Host
+$i++
+} while ( $i -lt 5 )
+#
+### Ajout de 2 données au tableau 1.
+#
+$i = 0 # Reset de la valeur.
+do {
+Write-Host "Ajoutez une note au tableau 1."
+$notes1 += Read-Host
+$i++
+} while ( $i -lt 2 )
+#
+### Acquisition des données du tableau 2.
+#
+$i = 0 # Reset de la valeur.
+do {
+Write-Host "Entrez une note pour le second tableau."
+$notes2 += Read-Host
+$i++
+} while ( $i -lt 3 )
+#
+### Création du tableau 3 par concaténation des tableaux 1 et 2.
+#
+$notes3 = $notes1 + $notes2
+#
+### Calcul de la somme des notes du tableau 3.
+#
+$i = 0 # Reset de la valeur.
+while ( $i -lt $notes3.Length ) {
+$somme += $notes3[$i]
+$i++
+} #
+### Calcul de la moyenne.
+#
+$moyenne = $somme / $notes3.Length
+#Write-Host( "La moyenne est: $moyenne" )
+#
+### Determine la note littérale et la mention accordée selon la moyenne.
+#
+if ( $moyenne -ge 90 ) {
+$noteLitterale = 'A'
+$mention = "Excellent"
+}
+elseif (( $moyenne -ge 80 ) -and ( $moyenne -le 89 )) {
+$noteLitterale = 'B'
+$mention = "Tres bien"
+}
+elseif (( $moyenne -ge 70 ) -and ( $moyenne -le 79 )) {
+$noteLitterale = 'C'
+$mention = "Bien"
+}
+elseif (( $moyenne -ge 60 ) -and ( $moyenne -le 69 )) {
+$noteLitterale = 'D'
+$mention = "Passable"
+}
+else {
+$noteLitterale = 'E'
+$mention = "Echec"
+} #
+### Affiche la note littérale et la mention.
+#
+Write-Host( 'Note litterale: ' + $noteLitterale + ' mention: ' + $mention )
+#
+
+</code></pre>
+
+		<dt>prof pair impair modulo	</dt>							
+<pre><code>log_batch_size = Integer(
+ ### variables #
+#
+[int] $nombre # Nombre recu.
+
+Clear-Host
+write-Host -NoNewLine "Entrez un nombre : "
+[int] $nombre = Read-Host
+
+ if (( $nombre % 2 ) -eq 0) {
+ Write-Host "$nombre est pair."
+}
+
+else { 
+     Write-Host "$nombre est impair."
+}
+
+</code></pre>	
+
+
+<dt>Prof affiche etoile 10fois avec couleur for, while do while</dt>
+<pre><code>log_batch_size = Integer(
+ 
+
+### Variables
+
+[int] $i # Variable de controle de la boucle
+
+
+
+#main
+
+
+
+### Boucle for
+
+Clear-Host
+
+write-Host -ForegroundColor Green "### Boucle for."
+
+for ( $i = 0 ; $i -le $MAX ; $i++) {
+
+
+  Write-Host -ForegroundColor green -NoNewline -Object "* "
+}
+
+#Boucle  while
+#
+
+write-Host
+write-Host
+write-Host -ForegroundColor Magenta "### Boucle while"
+
+$i = 0 # RESET DE $i
+
+While ( $i -le $MAX ) {
+
+Write-Host -ForegroundColor magenta -NoNewline -Object "* "
+$i++
+} 
+
+#Boucle do while
+write-Host
+write-Host
+write-Host -ForegroundColor Yellow "## Boucle Do while"
+
+$i = 0 # RESET DE $i
+
+
+do {
+    Write-Host -ForegroundColor yellow -NoNewline -Object "* " 
+    $i++
+} while ( $i -le $MAX )
+
+</code></pre>
+
+<dt>prof poids kilo</dt>
+<pre><code>log_batch_size = Integer(
+ Entrées: Un poids en livres.
+#
+# Sorties: Affiche le poids converti en grammes ou en kilos.
+#
+# Description: Le script demande un poids en livre à l'utilisateur puis converti
+# ce poids en grammes ou en kilo si la conversion donne 1000 grammes
+# ou plus. Le poids en grammes ou en kilos sera affiche.
+#
+# Modifications:
+#
+###############################################################################
+#
+### Constantes
+#
+[int] $GR = 454 # Nombre de grammes dans 1 livre.
+[int] $KILO = 1000 # Nombre de grammes dans 1 kilo.
+#
+### Variables
+#
+[float] $poids # Le poids en livre.
+##############################################################################
+# MAIN #
+##############################################################################
+Clear-Host
+Write-Host -NoNewline "Entrez le poids en livres: "
+[float] $poids = Read-Host
+#
+### Conversion du poids en grammes ou en kilos.
+#
+$poids *= $GR
+if ( $poids -ge $KILO ) {
+$poids /= $KILO
+Write-Host -NoNewline "Le poids en kilos:" $poids "kilos."
+}
+else {
+Write-Host -NoNewline "Le poids en grammes:" $poids "grammes."
+}
+
+</code></pre>
+
+<dt>prof valeur plus grand plus petit egale</dt>
+<pre><code>log_batch_size = Integer(
+ [int] $valeur1 = 5
+[int] $valeur2 = 0
+
+Write-Host "Entrez un bnombre entre 0-20"
+$valeur2 = Read-Host
+
+if ( $valeur2 -lt $valeur1 )
+{
+Write-Host " $valeur2 est plus petit que $valeur1"
+}
+elseif ( $valeur2 -gt $valeur1 )
+{
+Write-Host " $valeur2 est plus grand que $valeur1"
+}
+else
+{
+Write-Host " $valeur2 est la meme que $valeur1"
+}
+Read-Host
+
+</code></pre>
+<dt>total impot</dt>
+<pre><code>log_batch_size = Integer(
+ # Auteur Mansouri Lamri
+#Date 2021-05-28
+#version 1.0
+#
+#
+#Entées: un nombre
+
+#Sorties: affiche le calcul de son impot
+#
+#Description :
+#Treyson Liverpool doit payé un impôt sur son revenu annuel. Il désire un programme qui lui
+#permettra de calculer le montant d'impôt à payer selon son revenu annuel.Votre programme doit
+#prévoir que le revenu sera fourni par l’utilisateur ainsi que le taux d’impôt.
+#
+########################################################################################
+#
+#					Main
+########################################################################################
+
+
+
+
+
+###Variables
+[int] $Revenu =0
+[float] $Tauxdeimpots = 0
+[float] $Revenudeimpots = 0
+Clear-Host
+
+Write-Host -Nonewline "Entrez Le Revenu :" #entree le revenu
+$Revenu = Read-Host     #read l'entree
+Write-Host -Nonewline "Entrez le Taux-Impots en % :"  #faire apllique combien pourcentage
+$TauxdeImpots = Read-Host # lecteur du pourcentage
+$RevenudeImpots = $Revenu * ($TauxdeImpots/100) # apllique le pourcentage /100
+
+Clear-host
+Write-Host "Revenu Annuel         : " $Revenu $
+Write-Host "Taux-Impots en %      : " $TauxdeImpots %
+Write-Host "Impots annuel a Payer : " $RevenudeImpots $
+
+</code></pre>
+							
+						
+						<!-- Footer -->
+							<footer>
+								<div class="pagination">
+									<ul class="actions special">
+										<li><a href="../Blog.html" class="button">Back</a></li>
+									</ul>
+								</div>
+							</footer>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section class="split contact">
+							<section class="alt">
+									<h3>Address</h3>
+								<p>H7X-3V9<br />
+								 Laval,Quebec, Canada </p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p>(1) 514-623-7587</p>
+							</section>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Email</h3>
+								<p><a href="MAILTO:mansourilamri3@outlook.com">mansourilamri3@outlook.com</a><br />
+									You can write to me either in English or French</p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://twitter.com/mansourilamri" target="_blank"class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="http://linkedin.com/in/mansourilamri" target="_blank"class="icon brands fa-linkedin"><span class="label">Linkdin</span></a></li>
+									<li><a href="MAILTO:mansourilamri@gmail.com" target="_blank" class="icon regular fa-envelope"><span class="label">E-Mail</span></a></li>
+									<li><a href="https://github.com/mansourilamri" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Lamri,Mansouri. All Rights Reserved.</li><li>Design: <a href="">mansouri lamri/V 2.0></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>

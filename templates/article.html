@@ -1,0 +1,374 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>FAN, Hanwei 樊瀚伟 Blog</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">FAN, Hanwei</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">About me</a></li>
+							<li><a href="RH.html">Recent Highlights</a></li>
+							<li class="active"><a href="Blog.html">Blog</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Point Cloud<br />
+									FPGA accelaration</h1>
+								</header>
+
+								<!-- Text stuff -->
+									<h2>点云概念</h2>
+									<p><strong>点云与三维图像的关系：</strong>三维图像是一种特殊的信息表达形式，其特征是表达的空间中三个维度的数据，表现形式包括：深度图（以灰度表达物体与相机的距离），几何模型（由CAD软件建立），点云模型（所有逆向工程设备都将物体采样成点云）。和二维图像相比，三维图像借助第三个维度的信息，可以实现天然的物体——背景解耦。点云数据是最为常见也是最基础的三维模型。点云模型往往由测量直接得到，每个点对应一个测量点，未经过其他处理手段，故包含了最大的信息量。这些信息隐藏在点云中需要以其他提取手段将其萃取出来，提取点云中信息的过程则为三维图像处理。<br />
+									<strong>点云的概念：</strong>点云是在同一空间参考系下表达目标空间分布和目标表面特性的海量点集合，在获取物体表面每个采样点的空间坐标后，得到的是点的集合，称之为“点云”（Point Cloud）。<br />
+									<strong>点云的获取设备：</strong>RGBD设备是获取点云的设备，比如PrimeSense公司的PrimeSensor、微软的Kinect、华硕的XTionPRO。<br />
+									<strong>点云的内容：</strong>根据激光测量原理得到的点云，包括三维坐标（XYZ）和激光反射强度（Intensity），强度信息与目标的表面材质、粗糙度、入射角方向，以及仪器的发射能量，激光波长有关。根据摄影测量原理得到的点云，包括三维坐标（XYZ）和颜色信息（RGB）。结合激光测量和摄影测量原理得到点云，包括三维坐标（XYZ）、激光反射强度（Intensity）和颜色信息（RGB）。<br />
+									<strong>点云的属性：</strong>空间分辨率、点位精度、表面法向量等。<br />
+									<strong>点云存储格式：</strong>*.pts; *.asc ; *.dat; .stl ; [1] .imw；.xyz；.las。LAS格式文件已成为LiDAR数据的工业标准格式，LAS文件按每条扫描线排列方式存放数据,包括激光点的三维坐标、多次回波信息、强度信息、扫描角度、分类信息、飞行航带信息、飞行姿态信息、项目信息、GPS信息、数据点颜色信息等。</p>
+									<hr />
+									<header>
+										<h2>Heading with a Subtitle</h2>
+										<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+									</header>
+									<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+									<header>
+										<h3>Heading with a Subtitle</h3>
+										<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+									</header>
+									<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+									<header>
+										<h4>Heading with a Subtitle</h4>
+										<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+									</header>
+									<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+
+									<hr />
+
+								<!-- Lists -->
+									<h2>Lists</h2>
+									<div class="row">
+										<div class="col-6 col-12-small">
+
+											<h3>Unordered</h3>
+											<ul>
+												<li>Dolor pulvinar etiam.</li>
+												<li>Sagittis lorem eleifend.</li>
+												<li>Felis feugiat dolore viverra.</li>
+												<li>Dolor pulvinar etiam.</li>
+											</ul>
+
+											<h3>Alternate</h3>
+											<ul class="alt">
+												<li>Dolor pulvinar etiam etiam.</li>
+												<li>Sagittis adipiscing eleifend.</li>
+												<li>Felis enim dolore viverra.</li>
+												<li>Dolor pulvinar etiam etiam.</li>
+											</ul>
+
+										</div>
+										<div class="col-6 col-12-small">
+
+											<h3>Ordered</h3>
+											<ol>
+												<li>Dolor pulvinar etiam.</li>
+												<li>Etiam vel felis at viverra.</li>
+												<li>Felis enim feugiat magna.</li>
+												<li>Etiam vel felis nullam.</li>
+												<li>Felis enim et tempus.</li>
+											</ol>
+
+											<h3>Icons</h3>
+											<ul class="icons">
+												<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+												<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+												<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+												<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+												<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+											</ul>
+											<ul class="icons alt">
+												<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+												<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+												<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+												<li><a href="#" class="icon brands alt fa-github"><span class="label">Github</span></a></li>
+												<li><a href="#" class="icon brands alt fa-dribbble"><span class="label">Dribbble</span></a></li>
+											</ul>
+
+										</div>
+									</div>
+									<h3>Definition</h3>
+									<dl>
+										<dt>Item 1</dt>
+										<dd>
+											<p>Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+										</dd>
+										<dt>Item 2</dt>
+										<dd>
+											<p>Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+										</dd>
+										<dt>Item 3</dt>
+										<dd>
+											<p>Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+										</dd>
+									</dl>
+
+									<h3>Actions</h3>
+									<ul class="actions">
+										<li><a href="#" class="button primary">Primary</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions small">
+										<li><a href="#" class="button primary small">Small</a></li>
+										<li><a href="#" class="button small">Small</a></li>
+									</ul>
+									<div class="row">
+										<div class="col-6 col-12-small">
+											<ul class="actions stacked">
+												<li><a href="#" class="button primary">Default</a></li>
+												<li><a href="#" class="button">Default</a></li>
+											</ul>
+										</div>
+										<div class="col-6 col-12-small">
+											<ul class="actions stacked">
+												<li><a href="#" class="button primary small">Small</a></li>
+												<li><a href="#" class="button small">Small</a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-6 col-12-small">
+											<ul class="actions stacked">
+												<li><a href="#" class="button primary fit">Default</a></li>
+												<li><a href="#" class="button fit">Default</a></li>
+											</ul>
+										</div>
+										<div class="col-6 col-12-small">
+											<ul class="actions stacked">
+												<li><a href="#" class="button primary small fit">Small</a></li>
+												<li><a href="#" class="button small fit">Small</a></li>
+											</ul>
+										</div>
+									</div>
+
+									<hr />
+
+								<!-- Blockquote -->
+									<h2>Blockquote</h2>
+									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis.</blockquote>
+
+									<hr />
+
+								<!-- Table -->
+									<h2>Table</h2>
+
+									<h3>Default</h3>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item 1</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item 2</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item 3</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item 4</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item 5</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+
+									<hr />
+
+								<!-- Image -->
+									<h2>Image</h2>
+
+									<h3>Fit</h3>
+									<span class="image fit"><img src="images/pic01.jpg" alt="" /></span>
+									<div class="box alt">
+										<div class="row gtr-50 gtr-uniform">
+											<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
+											<!-- Break -->
+											<div class="col-4"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+											<!-- Break -->
+											<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+										</div>
+									</div>
+
+									<h3>Left &amp; Right</h3>
+									<p><span class="image left"><img src="images/pic08.jpg" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Vestibulum ante ipsum primis in faucibus magna blandit adipiscing eu felis iaculis.</p>
+									<p><span class="image right"><img src="images/pic09.jpg" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Vestibulum ante ipsum primis in faucibus magna blandit adipiscing eu felis iaculis.</p>
+
+									<hr />
+
+								<!-- Box -->
+									<h2>Box</h2>
+									<div class="box">
+										<p>none</p>
+									</div>
+
+									<hr />
+
+								<!-- Preformatted Code -->
+									<h2>Preformatted</h2>
+									<pre><code>i = 0;
+
+									while (!deck.isInOrder()) {
+									    print 'Iteration ' + i;
+									    deck.shuffle();
+									    i++;
+									}
+
+									print 'It took ' + i + ' iterations to sort the deck.';
+									</code></pre>
+
+							</section>
+						
+								<!-- Footer -->
+									<footer>
+										<div class="pagination">
+											<!--<a href="#" class="previous">Prev</a>-->
+											<a href="#" class="page active">1</a>
+											<a href="#" class="page">2</a>
+											<a href="#" class="page">3</a>
+											<span class="extra">&hellip;</span>
+											<a href="#" class="page">8</a>
+											<a href="#" class="page">9</a>
+											<a href="#" class="page">10</a>
+											<a href="#" class="next">Next</a>
+										</div>
+									</footer>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>The Hong Kong Univ. of Sci. and Tech.<br />
+								Clear Water Bay, Kowloon, Hong Kong, China </p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">Privacy</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">hanweifan2018@outlook.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

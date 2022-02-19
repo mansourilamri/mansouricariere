@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Lamri, Mansouri Blog</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="../index.html" class="logo">Lamri, Mansouri</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="../index.html">About me</a></li>
+							<li><a href="../RH.html">Recent Highlights</a></li>
+							<li class="active"><a href="../Blog.html">Blog</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://twitter.com/mansourilamri" target="_blank"class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="http://linkedin.com/in/mansourilamri" target="_blank"class="icon brands fa-linkedin"><span class="label">Linkdin</span></a></li>
+									<li><a href="MAILTO:mansourilamri@gmail.com" target="_blank" class="icon regular fa-envelope"><span class="label">E-Mail</span></a></li>
+									<li><a href="https://github.com/mansourilamri" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>KLinux, Redhat, Ubuntu, Kali, Mint, Centos, kubuntu</h1>
+								</header>
+									<dl>
+										<dt>Sécurité</dt>
+										<dd>
+											<pQuelle commande (nom de la commande et option) devez-vous tapez pour afficher les ports ouverts du protocole TCP à l’adresse 127.0.0.1?
+Réponse : nmap -sT 127.0.0.1
+ </p>
+										</dd>
+										<dt>Quelle commande (nom de la commande et option) devez-vous tapez pour afficher les ports ouverts du protocole UDP à l’adresse 127.0.0.1?
+Réponse : nmap -sU 127.0.0.1
+</dt>
+										<dt>Quel est le numéro de port du service « daytime »? 13</dt>
+										<dt>Quel(s) est (sont) le(s) protocole(s) utilisé(s) par ce service?
+Réponse : Protocole de transport control TCP et UDP de la suite protocoles TCP/IP
+</dt>
+										<dt>Dans quel fichier (nom absolu) touve-t-on l’information?
+Réponse: /etc/services
+</dt>
+										<dt>À l’aide de l’utilitaire netstat, déterminez quels ports du protocol TCP sont en « écoute » sur votre poste de travail. Inscrivez la commande (nom de la commande et option) ci-dessous.
+Réponse : netstat –tcp --listening
+</dt>
+										<dt>Bien que l’utilitaire netstat fonctionne, celui-ci est en désuètude. Quel est le nom de l’utilitaire est est appellé à le remplacer?
+Réponse :SS
+</dt>
+
+<dt>Supposons que le service totod fonctionne sur un serveur et que ce service n’est pas requis, pire, il peut être un problème pour la sécurité de votre réseau. On vous demande de désactiver ce service de telle sorte que même lors d’un redémarrage du serveur, le service ne sera pas démarré. Indiquez les étapes et les commandes requises pour désactiver le service.
+Réponse : systemctl list-unit-files –type=socket –no-pager
+</dt>
+<dt># systemctl stop totod  ( en stop d’abord le service)
+#systemctl status totod (je veux m’assurer si le service a été arrêter)
+# systemctl disale totod (désactivation de service complètement)
+# systemctl is-enabled (vérification s’il est active encore ou pas)
+/dt>
+
+
+
+			
+    cutting_dim = depth % len(point)
+    if n.location == point:
+        if n.right is not None:
+            n.location = findmin(n.right, depth + 1, cutting_dim, None)
+            delete(n.right, n.location, depth + 1)
+        elif n.left is not None:
+            n.location = findmin(n.left, depth + 1)
+            delete(n.left, n.location, depth + 1)
+            n.right = n.left
+            n.left = None
+        else:
+            n = None
+    else:
+        if point[cutting_dim] < n.location[cutting_dim]:
+            delete(n.left, point, depth + 1)
+        else:
+            delete(n.right, point, depth + 1)
+											</code></pre>
+										</dd>
+											
+										<dt>scikit-learn使用</dt>
+										<dd>
+										
+
+										</dd>
+							
+							</section>
+						
+						<!-- Footer -->
+							<footer>
+								<div class="pagination">
+									<ul class="actions special">
+										<li><a href="../Blog.html" class="button">Back</a></li>
+									</ul>
+								</div>
+							</footer>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section class="split contact">
+							<section class="alt">
+										<h3>Address</h3>
+								<p>H7X-3V9<br />
+								 Laval,Quebec, Canada </p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p>(1) 514-623-7587</p>
+							</section>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Email</h3>
+								<p><a href="MAILTO:mansourilamri3@outlook.com">mansourilamri3@outlook.com</a><br />
+									You can write to me either in English or French</p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://twitter.com/mansourilamri" target="_blank"class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="http://linkedin.com/in/mansourilamri" target="_blank"class="icon brands fa-linkedin"><span class="label">Linkdin</span></a></li>
+									<li><a href="MAILTO:mansourilamri@gmail.com" target="_blank" class="icon regular fa-envelope"><span class="label">E-Mail</span></a></li>
+									<li><a href="https://github.com/mansourilamri" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Lamri,Mansouri. All Rights Reserved.</li><li>Design: <a href="">mansouri lamri/V 2.0></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
